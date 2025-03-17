@@ -10,6 +10,7 @@ public class Brick : MonoBehaviour
         if (destroyRoutine != null) return;
         if (!other.gameObject.CompareTag("Ball")) return;
         destroyRoutine = StartCoroutine(DestroyWithDelay());
+        AudioManager.Instance.PlaySFX("Impact");
     }
 
     private IEnumerator DestroyWithDelay()
