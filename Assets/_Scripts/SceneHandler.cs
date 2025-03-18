@@ -17,6 +17,9 @@ public class SceneHandler : SingletonMonoBehavior<SceneHandler>
     private int nextLevelIndex;
     private float initXPosition;
 
+    // Store current lives globally so they persist between scenes
+    private int currentLives;
+
     protected override void Awake()
     {
         base.Awake();
@@ -55,5 +58,15 @@ public class SceneHandler : SingletonMonoBehavior<SceneHandler>
     {
         yield return new WaitForSeconds(animationDuration);
         SceneManager.LoadScene(scene);
+    }
+
+    public int GetCurrentLives()
+    {
+        return currentLives;
+    }
+
+    public void SetCurrentLives(int newLives)
+    {
+        currentLives = newLives;
     }
 }
