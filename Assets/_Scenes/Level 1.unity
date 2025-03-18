@@ -579,7 +579,7 @@ MonoBehaviour:
   ball: {fileID: 2054714181}
   bricksContainer: {fileID: 1170594424}
   score: 0
-  pointsPerBrick: 100
+  pointsPerBrick: 1
 --- !u!1001 &443665624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2538,7 +2538,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Bricks Destroyed: 0'
 --- !u!222 &1907810091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2563,8 +2563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 321.56912, y: 207.38474}
-  m_SizeDelta: {x: 156.8616, y: 35.2306}
+  m_AnchoredPosition: {x: 251, y: 196}
+  m_SizeDelta: {x: 275.5361, y: 35.2306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1976058296
 GameObject:
