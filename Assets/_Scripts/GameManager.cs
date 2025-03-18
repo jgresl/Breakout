@@ -5,7 +5,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private int maxLives = 3;
     [SerializeField] private Ball ball;
     [SerializeField] private Transform bricksContainer;
-
+    [SerializeField] private int score = 0;
+    [SerializeField] private int pointsPerBrick = 100;
     private int currentBrickCount;
     private int totalBrickCount;
 
@@ -32,6 +33,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // fire audio here
         // implement particle effect here
         // add camera shake here
+        score += pointsPerBrick;
+        UpdateScoreUI();
         currentBrickCount--;
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
         if(currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
@@ -43,5 +46,9 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // update lives on HUD here
         // game over UI if maxLives < 0, then exit to main menu after delay
         ball.ResetBall();
+    }
+    private void UpdateScoreUI()
+    {
+    UIManager.Instance.UpdateScore(score);
     }
 }
